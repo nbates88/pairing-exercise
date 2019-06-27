@@ -1,16 +1,9 @@
-//const SomethingElse = require("./something_else");
+#!/usr/bin/env node
+"use strict";
+const Poker = require("./Poker");
 
-class Something {
-  constructor(somethingElse) {
-    this.somethingElse = somethingElse;
-  }
-  add(num1, num2) {
-    return num1 + num2;
-  }
-
-  subtract(num1, num2) {
-    return this.somethingElse.subtract(num1, num2);
-  }
-}
-
-module.exports = Something;
+module.exports.init = function() {
+  console.log("here");
+  const poker = new Poker();
+  poker.readFile();
+};
